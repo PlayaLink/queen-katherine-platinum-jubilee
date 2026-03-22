@@ -4,8 +4,8 @@ import MemoryCard from "@/components/MemoryCard";
 export default function ScrollLayout({ memories }: { memories: Memory[] }) {
   return (
     <div className="scroll-layout">
-      {memories.map((memory) => (
-        <MemoryCard key={memory.name} memory={memory} />
+      {memories.map((memory, i) => (
+        <MemoryCard key={memory.name} memory={memory} priority={i < 6} />
       ))}
     </div>
   );
