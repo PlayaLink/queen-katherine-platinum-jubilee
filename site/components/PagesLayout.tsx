@@ -28,7 +28,7 @@ export default function PagesLayout({ memories }: { memories: Memory[] }) {
 
   return (
     <div className="pages-layout">
-      <MemoryCard memory={memories[page]} />
+      <MemoryCard key={page} memory={memories[page]} priority />
       <nav className="pages-nav">
         <button onClick={goPrev} aria-label="Previous memory">
           ← Prev

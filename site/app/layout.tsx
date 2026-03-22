@@ -38,6 +38,10 @@ export const metadata: Metadata = {
     "A collection of memories and love from friends and family for Katherine's 70th birthday.",
 };
 
+/* Inline script that runs before paint to apply persisted theme,
+   preventing a flash of the default theme. */
+const themeScript = `(function(){try{var t=sessionStorage.getItem('kb70-theme');if(t&&['mosaic','journal','garden-party','collage','gallery'].includes(t)){document.documentElement.setAttribute('data-theme',t)}}catch(e){}})()`;
+
 export default function RootLayout({
   children,
 }: {
@@ -48,7 +52,11 @@ export default function RootLayout({
       lang="en"
       data-theme="mosaic"
       className={`${playfair.variable} ${caveat.variable} ${lora.variable} ${cormorant.variable}`}
+      suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>{children}</body>
     </html>
   );
