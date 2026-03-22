@@ -1,0 +1,8 @@
+node_modules/
+.next/
+.env*.local
+*.heic
+__pycache__/
+*.pickle
+site/.next/
+site/node_modules/
