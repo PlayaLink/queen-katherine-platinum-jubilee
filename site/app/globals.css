@@ -38,7 +38,6 @@ html {
 
 body {
   background-color: var(--bg);
-  background-image: none;
   color: var(--text);
   font-family: var(--font-body);
   transition: background-color 0.4s ease, color 0.4s ease;
@@ -242,23 +241,14 @@ body {
   --font-quote: Georgia, serif;
 }
 
-/* Mosaic: subtle tile grid overlay */
+/* Mosaic: Byzantine staggered tesserae with grout lines */
 [data-theme="mosaic"] body {
   background-image:
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 59px,
-      rgba(74, 52, 102, 0.25) 59px,
-      rgba(74, 52, 102, 0.25) 60px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 59px,
-      rgba(74, 52, 102, 0.25) 59px,
-      rgba(74, 52, 102, 0.25) 60px
-    );
+    repeating-linear-gradient(90deg, transparent, transparent 34.5px, rgba(74, 52, 102, 0.3) 34.5px, rgba(74, 52, 102, 0.3) 37.5px),
+    repeating-linear-gradient(0deg, transparent, transparent 34.5px, rgba(74, 52, 102, 0.3) 34.5px, rgba(74, 52, 102, 0.3) 37.5px),
+    repeating-linear-gradient(90deg, transparent, transparent 15px, rgba(201, 168, 76, 0.06) 15px, rgba(201, 168, 76, 0.06) 22.5px, transparent 22.5px, transparent 37.5px),
+    repeating-linear-gradient(45deg, transparent, transparent 72px, rgba(201, 168, 76, 0.04) 72px, rgba(201, 168, 76, 0.04) 75px);
+  background-size: 37.5px 37.5px, 37.5px 37.5px, 37.5px 37.5px, 75px 75px;
 }
 
 /* Mosaic: grouted tile border on cards */
