@@ -78,6 +78,12 @@ export const memories: Memory[] = [
     photo: "Rick_Rinaldi.jpg",
   },
   {
+    name: "Jaime Arroyo",
+    quote:
+      "Dear Katherine, the places we've been and the things we have seen! Let's keep rolling.",
+    photo: "Jaime_Arroyo.jpg",
+  },
+  {
     name: "Jim and Carol Towler",
     quote:
       "Katherine,\nOver the years you have taken me completely out of my comfort zone with your frustrating, baffling, dismaying, irksome and vexing ways. You shoot from the hip, are always on the move and swing a wide net. You are overly idealistic, passionate, limitless with your ideas and talent, and many times, absolutely completely delusional.\n\nSimply put, my life is so much bigger and so much, much better because of you. Happy Birthday, and cheers to many more exhausting years.\nMuch love, Carol",
@@ -135,7 +141,7 @@ export const memories: Memory[] = [
     name: "Patti Huber",
     quote:
       "She is such a well loved, amazing woman. I consider myself so lucky to be one of her students.",
-    photo: null,
+    photo: "Patti_Huber.jpg",
   },
   {
     name: "Garett Switzer",
