@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/*
+ * Theme custom properties — defaults (royal purple).
+ * Issue #4 will add [data-theme] selectors to override these.
+ */
+:root {
+  --bg: #0f0a1a;
+  --bg-secondary: #1a1128;
+  --card-bg: #1e1533;
+  --card-bg-hover: #261d40;
+  --text: #f0e6ff;
+  --text-secondary: #c4b5d9;
+  --accent: #c9a0dc;
+  --accent-bright: #e0b0ff;
+  --border: #3d2e5c;
+  --border-light: #4a3870;
+  --hero-gradient-start: #1a0a2e;
+  --hero-gradient-end: #0f0a1a;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent horizontal overflow on mobile */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Decorative divider */
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--accent);
+  opacity: 0.6;
+}
+
+.ornament::before,
+.ornament::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent),
+    transparent
+  );
+}
+
+/* Placeholder for memories without photos */
+.photo-placeholder {
+  background: linear-gradient(
+    135deg,
+    var(--card-bg) 0%,
+    var(--border) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-placeholder::after {
+  content: "\2726";
+  font-size: 3rem;
+  color: var(--accent);
+  opacity: 0.3;
+}
