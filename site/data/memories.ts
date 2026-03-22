@@ -30,12 +30,6 @@ export const memories: Memory[] = [
     photo: "Patty_Hsiu.jpg",
   },
   {
-    name: "Rebecca England",
-    quote:
-      "Photos shared via Google Photos — zombie apocalypse survival kits and more!",
-    photo: null,
-  },
-  {
     name: "Lauralyn Eschner",
     quote:
       "At one of All the Arts' auctions (many years ago!) I found myself inadvertently winning a vacation to Puerto Vallarta. And who better to go on an adventure with than Katherine?!? During our short trip we explored the Botanical Gardens, ziplined over a river filled with bathing-suited people trying to stay cool, kayaked in the salty ocean, discovered a 6-foot boa constrictor slithering up the stairs in the building where we were staying, and ended up visiting the zoo. This zoo was not like those in the United States. In this zoo you could get really close to the animals and readily interact with the amazing creatures. It was here that I discovered what I had always suspected was true: Katherine has a universally magnetic personality that people AND animals respond to! Her energy not only transcends languages, but it transcends species, as well. This camel clearly fell in love with her... immediately! Katherine is a force of nature and I feel so lucky to be on the same planet in the same place at the same time that she is!",

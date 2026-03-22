@@ -36,6 +36,18 @@ export const metadata: Metadata = {
   title: "Happy 70th Birthday, Katherine!",
   description:
     "A collection of memories and love from friends and family for Katherine's 70th birthday.",
+  openGraph: {
+    title: "Happy 70th Birthday, Katherine!",
+    description:
+      "A collection of memories and love from friends and family for Katherine's 70th birthday.",
+    images: [
+      {
+        url: "/photos/Lauralyn_Eschner.jpg",
+        width: 1430,
+        height: 1075,
+      },
+    ],
+  },
 };
 
 /* Inline script that runs before paint to apply persisted theme,
