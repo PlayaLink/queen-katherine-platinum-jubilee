@@ -7,7 +7,7 @@ export default function HeroHeader({ memoryCount }: { memoryCount: number }) {
         <span className="hero-accent">Queen Katherine</span>
       </h1>
       <p className="hero-subtitle">
-        {memoryCount} memories from the people who love you
+        Words of Tribute from Her Royal Subjects
       </p>
     </header>
   );

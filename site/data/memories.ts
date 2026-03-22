@@ -141,7 +141,7 @@ export const memories: Memory[] = [
     name: "Garett Switzer",
     quote:
       "I have countless memories of Katherine over the years in which she's played various roles in my life; my friend's mom, my art teacher, my sage, and my friend. The most meaningful way she contributed in my development is she taught me to be curious and expressive. She took me to my first ever protest; protesting the Iraq war when I was a junior in high school. Even after Jordan went to college or moved to Spain or moved to France, she kept her door open to me so I could drop in whenever I wanted. She made me feel like a punk kid when I was young (which I was), but she made me feel like family as I got older.",
-    photo: null,
+    photo: "Garett_Switzer.jpg",
   },
   {
     name: "Erick Salgado",
@@ -165,11 +165,17 @@ export const memories: Memory[] = [
     name: "Alisha Flecky",
     quote:
       "Katherine made a big impact on my life at a young impressionable age... she trusted me to housesit probably before it was warranted (haha!) and funded me to do the Landmark Forum which opened my ways of thinking. Always full of life, unique opinions + artistic conviction, she was around to help shape my understanding of the world and what a woman could be in it! I'm grateful!! Happy birthday Katherine I hope you receive back 100x all you have given.",
-    photo: null,
+    photo: "Alisha_Flecky.jpg",
   },
   {
     name: "Candace Magoski",
     quote: "Photos submitted with love.",
     photo: "Candace_Magoski.jpg",
+  },
+  {
+    name: "Brian Tice",
+    quote:
+      "In 2008 or 2009, I went to your house before leaving for many months of travel and your Mom graciously spent lots of time with me talking about techniques used to keep a travel journal. She even gave me a custom journal. Her genuine attention, caring and support of that journal always stayed with me and inspired me to give others my time and attention when sharing knowledge. Truly a one of a kind person who I hold in the highest regard! Thank you!",
+    photo: "Brian_Tice.jpg",
   },
 ];
