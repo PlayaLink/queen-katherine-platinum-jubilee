@@ -1,1 +1,647 @@
 @import "tailwindcss";
+
+/* ================================================================
+   KATHERINE'S 70TH BIRTHDAY — THEME SYSTEM
+   ================================================================
+   Themes applied via [data-theme] attribute on <html>.
+   Font CSS variables (--font-playfair, etc.) set by next/font in layout.tsx.
+   ================================================================ */
+
+/* ----------------------------------------------------------------
+   BASE / DEFAULT (Mosaic fallback)
+   ---------------------------------------------------------------- */
+
+:root {
+  --bg: #1a1028;
+  --card-bg: #2d1b4e;
+  --text: #e8dff0;
+  --text-muted: #b8a8cc;
+  --card-text: #e8dff0;
+  --accent: #c9a84c;
+  --accent-secondary: #1a6b6a;
+  --border: #4a3466;
+  --card-radius: 0.25rem;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --font-heading: var(--font-playfair), Georgia, serif;
+  --font-body: system-ui, -apple-system, sans-serif;
+  --font-quote: Georgia, serif;
+}
+
+/* ----------------------------------------------------------------
+   BASE COMPONENT STYLES
+   ---------------------------------------------------------------- */
+
+body {
+  background-color: var(--bg);
+  background-image: none;
+  color: var(--text);
+  font-family: var(--font-body);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.hero-header {
+  position: relative;
+  padding: 3rem 1rem 2.5rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+@media (min-width: 640px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+.hero-subtitle {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+}
+
+.hero-accent {
+  color: var(--accent);
+}
+
+/* --- Memory Card --- */
+
+.memory-card {
+  position: relative;
+  background: var(--card-bg);
+  color: var(--card-text);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  overflow: visible;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.memory-card .card-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--card-radius);
+  margin-bottom: 1rem;
+}
+
+.memory-card .card-quote {
+  font-family: var(--font-quote);
+  color: var(--card-text);
+  font-style: italic;
+  white-space: pre-line;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.memory-card .card-attribution {
+  color: var(--accent);
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-align: right;
+  font-size: 0.95rem;
+}
+
+/* --- Layouts --- */
+
+.scroll-layout {
+  display: grid;
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
+}
+
+@media (min-width: 640px) {
+  .scroll-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .scroll-layout {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pages-layout {
+  max-width: 32rem;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
+}
+
+.pages-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+}
+
+.pages-nav button {
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  background: var(--card-bg);
+  color: var(--card-text);
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.pages-nav button:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+.pages-nav button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+
+/* ================================================================
+   THEME 1: MOSAIC
+   Jewel-tone tiles, tessellated borders, rich purples/teals/golds.
+   Inspired by Katherine's mosaic sculpture work.
+   ================================================================ */
+
+[data-theme="mosaic"] {
+  --bg: #1a1028;
+  --card-bg: #2d1b4e;
+  --text: #e8dff0;
+  --text-muted: #b8a8cc;
+  --card-text: #e8dff0;
+  --accent: #c9a84c;
+  --accent-secondary: #1a6b6a;
+  --border: #4a3466;
+  --card-radius: 0.25rem;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --font-heading: var(--font-playfair), Georgia, serif;
+  --font-body: system-ui, -apple-system, sans-serif;
+  --font-quote: Georgia, serif;
+}
+
+/* Mosaic: subtle tile grid overlay */
+[data-theme="mosaic"] body {
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 59px,
+      rgba(74, 52, 102, 0.25) 59px,
+      rgba(74, 52, 102, 0.25) 60px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 59px,
+      rgba(74, 52, 102, 0.25) 59px,
+      rgba(74, 52, 102, 0.25) 60px
+    );
+}
+
+/* Mosaic: grouted tile border on cards */
+[data-theme="mosaic"] .memory-card {
+  border: 3px solid var(--border);
+  box-shadow:
+    inset 0 0 0 1px rgba(201, 168, 76, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.4);
+  background-image:
+    linear-gradient(135deg, rgba(26, 107, 106, 0.06) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(201, 168, 76, 0.06) 25%, transparent 25%);
+}
+
+/* Mosaic: tessellated color strip under hero */
+[data-theme="mosaic"] .hero-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--accent) 0px,
+    var(--accent) 10px,
+    var(--accent-secondary) 10px,
+    var(--accent-secondary) 20px,
+    var(--border) 20px,
+    var(--border) 30px
+  );
+}
+
+
+/* ================================================================
+   THEME 2: JOURNAL
+   Cream/kraft paper, torn edges, washi tape, handwritten style.
+   Inspired by Katherine's visual journaling classes.
+   ================================================================ */
+
+[data-theme="journal"] {
+  --bg: #ede4d3;
+  --card-bg: #faf6ee;
+  --text: #3d2f1e;
+  --text-muted: #7a6b55;
+  --card-text: #3d2f1e;
+  --accent: #c17950;
+  --accent-secondary: #7ea697;
+  --border: #d4c5a9;
+  --card-radius: 2px;
+  --card-shadow: 2px 3px 8px rgba(0, 0, 0, 0.06);
+  --font-heading: system-ui, -apple-system, sans-serif;
+  --font-body: system-ui, -apple-system, sans-serif;
+  --font-quote: var(--font-caveat), cursive;
+}
+
+/* Journal: kraft paper texture via SVG noise */
+[data-theme="journal"] body {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Journal: washi tape stripe atop each card + slight rotation */
+[data-theme="journal"] .memory-card {
+  border: none;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.05);
+  transform: rotate(-0.3deg);
+  padding-top: 1.75rem;
+}
+
+[data-theme="journal"] .memory-card:nth-child(even) {
+  transform: rotate(0.5deg);
+}
+
+[data-theme="journal"] .memory-card:nth-child(3n) {
+  transform: rotate(-0.6deg);
+}
+
+/* Washi tape: diagonal stripe overlay */
+[data-theme="journal"] .memory-card::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 12%;
+  width: 65%;
+  height: 20px;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(193, 121, 80, 0.5),
+    rgba(193, 121, 80, 0.5) 5px,
+    rgba(193, 121, 80, 0.3) 5px,
+    rgba(193, 121, 80, 0.3) 10px
+  );
+  transform: rotate(-1deg);
+  z-index: 2;
+  border-radius: 1px;
+}
+
+/* Alternate washi tape: teal/green */
+[data-theme="journal"] .memory-card:nth-child(3n)::before {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(126, 166, 151, 0.5),
+    rgba(126, 166, 151, 0.5) 5px,
+    rgba(126, 166, 151, 0.3) 5px,
+    rgba(126, 166, 151, 0.3) 10px
+  );
+  transform: rotate(1.2deg);
+  left: 18%;
+  width: 55%;
+}
+
+/* Alternate washi tape: warm brown */
+[data-theme="journal"] .memory-card:nth-child(5n)::before {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(180, 140, 100, 0.5),
+    rgba(180, 140, 100, 0.5) 5px,
+    rgba(180, 140, 100, 0.3) 5px,
+    rgba(180, 140, 100, 0.3) 10px
+  );
+  transform: rotate(-1.5deg);
+}
+
+/* Journal: hand-drawn dashed line under hero */
+[data-theme="journal"] .hero-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--text) 0px,
+    var(--text) 10px,
+    transparent 10px,
+    transparent 18px
+  );
+  opacity: 0.25;
+}
+
+/* Journal: larger handwritten quotes for readability */
+[data-theme="journal"] .memory-card .card-quote {
+  font-size: 1.2rem;
+  font-style: normal;
+  line-height: 1.45;
+}
+
+
+/* ================================================================
+   THEME 3: GARDEN PARTY
+   Watercolor washes, botanical frames, soft greens and warm pinks.
+   Outdoor celebration feel.
+   ================================================================ */
+
+[data-theme="garden-party"] {
+  --bg: #f0f5ef;
+  --card-bg: #faf9f5;
+  --text: #2d3b2e;
+  --text-muted: #5a6b5c;
+  --card-text: #2d3b2e;
+  --accent: #d4857e;
+  --accent-secondary: #8db580;
+  --border: #c5d4b8;
+  --card-radius: 0.75rem;
+  --card-shadow: 0 4px 16px rgba(141, 181, 128, 0.12);
+  --font-heading: var(--font-lora), Georgia, serif;
+  --font-body: system-ui, -apple-system, sans-serif;
+  --font-quote: var(--font-lora), Georgia, serif;
+}
+
+/* Garden Party: watercolor gradient wash */
+[data-theme="garden-party"] body {
+  background-color: #f0f5ef;
+  background-image:
+    linear-gradient(
+      170deg,
+      #f0f5ef 0%,
+      #e8f0e5 15%,
+      #fce4e1 35%,
+      #f0f5ef 55%,
+      #e5eee0 75%,
+      #f7e8e6 100%
+    );
+  background-attachment: fixed;
+}
+
+/* Garden Party: botanical double border + floral accents */
+[data-theme="garden-party"] .memory-card {
+  border: 1px solid var(--border);
+  box-shadow:
+    0 0 0 4px var(--card-bg),
+    0 0 0 5.5px var(--border),
+    0 4px 16px rgba(141, 181, 128, 0.12);
+}
+
+[data-theme="garden-party"] .memory-card::before {
+  content: '❀';
+  position: absolute;
+  top: -0.15rem;
+  left: 0.6rem;
+  font-size: 1.1rem;
+  color: var(--accent);
+  opacity: 0.5;
+  z-index: 2;
+}
+
+[data-theme="garden-party"] .memory-card::after {
+  content: '✿';
+  position: absolute;
+  bottom: -0.1rem;
+  right: 0.6rem;
+  font-size: 1rem;
+  color: var(--accent-secondary);
+  opacity: 0.45;
+  z-index: 2;
+}
+
+/* Garden Party: soft watercolor wash on hero */
+[data-theme="garden-party"] .hero-header {
+  background: linear-gradient(
+    180deg,
+    rgba(212, 133, 126, 0.12) 0%,
+    rgba(141, 181, 128, 0.08) 50%,
+    transparent 100%
+  );
+}
+
+[data-theme="garden-party"] .hero-header::after {
+  content: '— ✿ —';
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--accent);
+  opacity: 0.4;
+  font-size: 1rem;
+  letter-spacing: 0.5em;
+}
+
+
+/* ================================================================
+   THEME 4: COLLAGE
+   Bold, layered, angled photos, paint splatter, mixed-media chaos.
+   Punk scrapbook energy.
+   ================================================================ */
+
+[data-theme="collage"] {
+  --bg: #1a1a1a;
+  --card-bg: #f5f0e8;
+  --text: #f0ebe3;
+  --text-muted: #a89e92;
+  --card-text: #1a1a1a;
+  --accent: #e63946;
+  --accent-secondary: #fca311;
+  --border: #000000;
+  --card-radius: 0;
+  --card-shadow: 5px 5px 0 #000000;
+  --font-heading: system-ui, -apple-system, sans-serif;
+  --font-body: system-ui, -apple-system, sans-serif;
+  --font-quote: system-ui, -apple-system, sans-serif;
+}
+
+/* Collage: dark bg with paint splatter blobs */
+[data-theme="collage"] body {
+  background-image:
+    radial-gradient(ellipse at 12% 20%, rgba(230, 57, 70, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 78% 55%, rgba(252, 163, 17, 0.12) 0%, transparent 45%),
+    radial-gradient(ellipse at 40% 80%, rgba(69, 123, 157, 0.1) 0%, transparent 35%),
+    radial-gradient(circle at 90% 10%, rgba(230, 57, 70, 0.08) 0%, transparent 30%),
+    radial-gradient(circle at 5% 70%, rgba(252, 163, 17, 0.06) 0%, transparent 25%);
+}
+
+/* Collage: thick border + alternating rotations */
+[data-theme="collage"] .memory-card {
+  border: 3px solid var(--border);
+  transform: rotate(-1.5deg);
+}
+
+[data-theme="collage"] .memory-card:nth-child(even) {
+  transform: rotate(1.2deg);
+}
+
+[data-theme="collage"] .memory-card:nth-child(3n) {
+  transform: rotate(2deg);
+}
+
+[data-theme="collage"] .memory-card:nth-child(4n+1) {
+  transform: rotate(-0.8deg);
+}
+
+[data-theme="collage"] .memory-card:hover {
+  transform: rotate(0deg) scale(1.03);
+  z-index: 10;
+  box-shadow: 8px 8px 0 #000000;
+}
+
+/* Collage: paint splatter blobs on cards */
+[data-theme="collage"] .memory-card::before {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: var(--accent);
+  border-radius: 60% 40% 50% 30%;
+  z-index: 2;
+  top: -8px;
+  right: -6px;
+}
+
+[data-theme="collage"] .memory-card:nth-child(even)::before {
+  background: var(--accent-secondary);
+  border-radius: 40% 60% 30% 50%;
+  top: auto;
+  right: auto;
+  bottom: -6px;
+  left: -6px;
+}
+
+[data-theme="collage"] .memory-card:nth-child(3n)::before {
+  background: #457b9d;
+  border-radius: 50% 30% 60% 40%;
+  top: -5px;
+  right: auto;
+  left: 20%;
+  width: 18px;
+  height: 18px;
+}
+
+/* Collage: bold red hero banner */
+[data-theme="collage"] .hero-header {
+  background: var(--accent);
+  color: #ffffff;
+  transform: rotate(-0.5deg);
+  margin: 0 -1rem 1rem;
+  padding: 2.5rem 2rem 2rem;
+}
+
+[data-theme="collage"] .hero-title {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 900;
+}
+
+[data-theme="collage"] .hero-subtitle {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+[data-theme="collage"] .hero-accent {
+  color: var(--accent-secondary);
+}
+
+
+/* ================================================================
+   THEME 5: GALLERY
+   Clean white walls, dramatic lighting, sophisticated and minimal.
+   Museum exhibition aesthetic.
+   ================================================================ */
+
+[data-theme="gallery"] {
+  --bg: #ffffff;
+  --card-bg: #fafafa;
+  --text: #1a1a1a;
+  --text-muted: #666666;
+  --card-text: #1a1a1a;
+  --accent: #8b7355;
+  --accent-secondary: #c4a97d;
+  --border: #e8e8e8;
+  --card-radius: 0;
+  --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+  --font-heading: var(--font-cormorant), Georgia, serif;
+  --font-body: system-ui, -apple-system, sans-serif;
+  --font-quote: var(--font-cormorant), Georgia, serif;
+}
+
+/* Gallery: pure white */
+[data-theme="gallery"] body {
+  background-color: #ffffff;
+}
+
+/* Gallery: dramatic shadow, generous padding, no visible border */
+[data-theme="gallery"] .memory-card {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+}
+
+/* Gallery: thin gold accent line at card bottom */
+[data-theme="gallery"] .memory-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+/* Gallery: minimal hero with centered gold accent */
+[data-theme="gallery"] .hero-header {
+  padding: 4rem 1rem 3rem;
+}
+
+[data-theme="gallery"] .hero-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  right: 30%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+[data-theme="gallery"] .hero-title {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+@media (min-width: 640px) {
+  [data-theme="gallery"] .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Gallery: elegant larger quote text */
+[data-theme="gallery"] .memory-card .card-quote {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Gallery: more breathing room in scroll grid */
+[data-theme="gallery"] .scroll-layout {
+  gap: 3rem;
+}

@@ -1,5 +1,36 @@
 import type { Metadata } from "next";
+import {
+  Playfair_Display,
+  Caveat,
+  Lora,
+  Cormorant_Garamond,
+} from "next/font/google";
 import "./globals.css";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  variable: "--font-caveat",
+  display: "swap",
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  variable: "--font-lora",
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  weight: ["300", "400", "600", "700"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Happy 70th Birthday, Katherine!",
@@ -13,7 +44,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      data-theme="mosaic"
+      className={`${playfair.variable} ${caveat.variable} ${lora.variable} ${cormorant.variable}`}
+    >
       <body>{children}</body>
     </html>
   );

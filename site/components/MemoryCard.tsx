@@ -3,24 +3,22 @@ import type { Memory } from "@/data/memories";
 
 export default function MemoryCard({ memory }: { memory: Memory }) {
   return (
-    <div className="max-w-md rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+    <div className="memory-card">
       {memory.photo && (
-        <div className="relative mb-4 aspect-square w-full overflow-hidden rounded-md">
+        <div className="card-image-wrapper">
           <Image
             src={`/photos/${memory.photo}`}
             alt={`Photo from ${memory.name}`}
             fill
             className="object-cover"
-            sizes="(max-width: 448px) 100vw, 448px"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         </div>
       )}
-      <blockquote className="mb-3 text-gray-700 italic whitespace-pre-line">
+      <blockquote className="card-quote">
         &ldquo;{memory.quote}&rdquo;
       </blockquote>
-      <p className="text-right font-semibold text-gray-900">
-        — {memory.name}
-      </p>
+      <p className="card-attribution">— {memory.name}</p>
     </div>
   );
 }
