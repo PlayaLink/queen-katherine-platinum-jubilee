@@ -31,12 +31,18 @@
    BASE COMPONENT STYLES
    ---------------------------------------------------------------- */
 
+html {
+  overflow-x: hidden;
+  background-color: var(--bg);
+}
+
 body {
   background-color: var(--bg);
   background-image: none;
   color: var(--text);
   font-family: var(--font-body);
   transition: background-color 0.4s ease, color 0.4s ease;
+  overflow-x: hidden;
 }
 
 .hero-header {
@@ -44,6 +50,7 @@ body {
   padding: 3rem 1rem 2.5rem;
   text-align: center;
   overflow: hidden;
+  margin-bottom: 3.5rem;
 }
 
 .hero-crown {
