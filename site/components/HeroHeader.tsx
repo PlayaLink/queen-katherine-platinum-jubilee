@@ -1,8 +1,10 @@
 export default function HeroHeader({ memoryCount }: { memoryCount: number }) {
   return (
     <header className="hero-header">
+      <p className="hero-crown" aria-hidden="true">♛</p>
       <h1 className="hero-title">
-        Happy 70th Birthday, <span className="hero-accent">Katherine</span>!
+        The Platinum Jubilee of{" "}
+        <span className="hero-accent">Queen Katherine</span>
       </h1>
       <p className="hero-subtitle">
         {memoryCount} memories from the people who love you
