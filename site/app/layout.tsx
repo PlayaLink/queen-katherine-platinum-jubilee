@@ -36,17 +36,29 @@ export const metadata: Metadata = {
   title: "Happy 70th Birthday, Katherine!",
   description:
     "A collection of memories and love from friends and family for Katherine's 70th birthday.",
+  metadataBase: new URL("https://queenkatherinejubilee.com"),
   openGraph: {
     title: "Happy 70th Birthday, Katherine!",
     description:
       "A collection of memories and love from friends and family for Katherine's 70th birthday.",
+    url: "https://queenkatherinejubilee.com",
+    siteName: "Queen Katherine's Platinum Jubilee",
+    type: "website",
     images: [
       {
-        url: "/photos/Lauralyn_Eschner.jpg",
-        width: 1430,
-        height: 1075,
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Katherine with her dog in her art studio",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Happy 70th Birthday, Katherine!",
+    description:
+      "A collection of memories and love from friends and family for Katherine's 70th birthday.",
+    images: ["/og-image.jpg"],
   },
 };
 
