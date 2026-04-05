@@ -33,16 +33,14 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Happy 70th Birthday, Katherine!",
-  description:
-    "A collection of memories and love from friends and family for Katherine's 70th birthday.",
+  title: "Queen Katherine Jubilee",
+  description: "Words of Tribute from Her Royal Subjects",
   metadataBase: new URL("https://queenkatherinejubilee.com"),
   openGraph: {
-    title: "Happy 70th Birthday, Katherine!",
-    description:
-      "A collection of memories and love from friends and family for Katherine's 70th birthday.",
+    title: "Queen Katherine Jubilee",
+    description: "Words of Tribute from Her Royal Subjects",
     url: "https://queenkatherinejubilee.com",
-    siteName: "Queen Katherine's Platinum Jubilee",
+    siteName: "Queen Katherine Jubilee",
     type: "website",
     images: [
       {
@@ -55,9 +53,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Happy 70th Birthday, Katherine!",
-    description:
-      "A collection of memories and love from friends and family for Katherine's 70th birthday.",
+    title: "Queen Katherine Jubilee",
+    description: "Words of Tribute from Her Royal Subjects",
     images: ["/og-image.jpg"],
   },
 };
