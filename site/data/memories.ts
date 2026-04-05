@@ -2,6 +2,7 @@ export type Memory = {
   name: string;
   quote: string;
   photo: string | null;
+  photoPosition?: string;
 };
 
 export const memories: Memory[] = [
@@ -177,5 +178,49 @@ export const memories: Memory[] = [
     quote:
       "In 2008 or 2009, I went to your house before leaving for many months of travel and your Mom graciously spent lots of time with me talking about techniques used to keep a travel journal. She even gave me a custom journal. Her genuine attention, caring and support of that journal always stayed with me and inspired me to give others my time and attention when sharing knowledge. Truly a one of a kind person who I hold in the highest regard! Thank you!",
     photo: "Brian_Tice.jpg",
+  },
+  {
+    name: "Anna Hansen",
+    quote:
+      "Like several of my relatives within a dozen years of my age, I had the wonderful experience of living with my aunt Katherine for a time. It was one of the most magical moments of my young adult life, leaving Utah, pursuing a future that brought me closer to being an artist.\n\nI was broke, completely unprepared, floundering. And Katherine pushed me to take on a job I wasn't ready for, to take on a studio space I was convinced I couldn't afford, and to connect with a community I did not feel worthy of. \"Are you scared?\" I remember her asking me. \"If it scares the shit out of you, you know you're doing the right thing.\" I will be forever grateful for those words.\n\nWitnessing her life during those two years helped shape the decisions that led me to where I am. Wild, sometimes seemingly reckless, always in pursuit of the adventure, the beauty and joy of life, and, doing what scares the shit out of you.\n\nHappy 70 years on Earth, Katherine.\nLove, Anna",
+    photo: "Anna_Hansen.jpg",
+  },
+  {
+    name: "Marilyn Shadaram",
+    quote:
+      "Happy Birthday!!!\n\nI just want to thank you for your courage — your bravery, strength, and vulnerability which have inspired me and so many women along the way over these many years.\n\nThough it starts with art, everything you create sparks curiosity, creativity, and a fresh way of seeing life. You have widened my lens and touched my life in ways I'll never forget, all having a lasting influence… and for that… I am endlessly grateful! \u2764\ufe0f\n\nAs you step into this new decade, may you continue to move boldly, challenge boldly, and create boldly — with the knowledge that you've inspired so many and are deeply loved. Continue to be true to yourself!!\n\nWith much love and gratitude,\nMarilyn Shadaram\n\nP.S. I took this picture of you while you were walking along the beach in Pajaro. Since you are doing for others so much of the time, this moment made me pause and really appreciate you for your individual Self.",
+    photo: "Marilyn_Shadaram.jpg",
+    photoPosition: "80% center",
+  },
+  {
+    name: "Lynne Orr",
+    quote:
+      "We were with a group of friends, when Caitlin took this photo of us while we were heading to the Pasadena Playhouse in June of 2016. Caitlin then posted it on Facebook where the exquisite artist Carol Towler saw it and drew this rendition — I love this piece!",
+    photo: "Lynne_Orr.jpg",
+    photoPosition: "center 15%",
+  },
+  {
+    name: "John Orr",
+    quote:
+      "Adding to the illustrious patrons of The Orchard Tea Gardens (such as Rupert Brooke, Virginia Woolf, and John Maynard Keynes) Katherine and Paul and sons and Lynne and I and daughters relax under the fruit trees one dreamy day by the River Cam in Grantchester, England, 1996.",
+    photo: "John_Orr.jpg",
+  },
+  {
+    name: "Amelia England",
+    quote:
+      "I have a very early Pajaro Dunes beach memory of Katherine. We all saw dolphins out in the surf and she took off to swim and greet them. Maybe I imagined it — was she carrying a surfboard? I remember her long hair waving behind her.",
+    photo: "Amelia_England_photo.jpg",
+  },
+  {
+    name: "Rebecca England",
+    quote:
+      "I feel lucky to claim Katherine as a lifelong friend ever since we five sisters shared a room for six months studying abroad in 1981 London. K and I share a fear of heights and an obsession with zombies. I can count on K having worked out elaborate escape plans no matter where we travel in the world. I love counting on my big sister to care about the important things in life.",
+    photo: "Rebecca_England.jpg",
+  },
+  {
+    name: "Jennifer England",
+    quote:
+      "My very first memory was when I was three in a playground with Katherine. My big sister helped me into a bucket swing and then left me, and I couldn't get out. It might have been only a minute but it felt like an eternity. Katherine was a very tall girl and as the eldest had to babysit us younger siblings, which must have tried her patience. One of her creative babysitting methods was her lying on the ground and playing dead. She'd ask us littler people to grab a limb, pick her up, and place her on the bed. Katherine was born in 1956 in Hawaii, before it was a state, so we teased her that she could never be president.",
+    photo: "Katherine_baby.jpg",
   },
 ];

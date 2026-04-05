@@ -70,8 +70,8 @@ def main():
     my_email = profile["emailAddress"].lower()
     print(f"Logged in as: {my_email}\n")
 
-    # Search broadly: last 10 days, anything mentioning katherine/birthday/memory/photo
-    date_cutoff = (datetime.now() - timedelta(days=10)).strftime("%Y/%m/%d")
+    # Search broadly: last 14 days, anything mentioning katherine/birthday/memory/photo
+    date_cutoff = (datetime.now() - timedelta(days=14)).strftime("%Y/%m/%d")
 
     queries = [
         f"after:{date_cutoff} katherine",
